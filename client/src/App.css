@@ -387,10 +387,12 @@ table th {
 /* Animation (Add After) */
 .item-enter {
   opacity: 0;
+  transform: scale(0.4);
 }
 .item-enter-active {
   opacity: 1;
-  transition: opacity 1000ms ease-in;
+  transform: scale(1);
+  transition: opacity, transform 1000ms ease-out;
 }
 .item-exit {
   opacity: 1;
