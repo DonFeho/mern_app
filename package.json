@@ -2,8 +2,8 @@
   "name": "feho_app",
   "version": "1.0.0",
   "description": "FehoApp",
-  "repository": "https://github.com/DonFeho/FehoApp.git",
-  "main": "index.js",
+  "repository": "",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
