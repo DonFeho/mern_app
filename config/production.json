@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://FirstFeho:feho2020@fehoapp-ada77.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "secret"
+}

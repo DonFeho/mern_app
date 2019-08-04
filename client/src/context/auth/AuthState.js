@@ -15,7 +15,6 @@ import {
 } from '../types';
 
 const AuthState = props => {
-  //INIT State
   const initialState = {
     token: localStorage.getItem('token'),
     isAuthenticated: null,
@@ -26,7 +25,7 @@ const AuthState = props => {
 
   const [state, dispatch] = useReducer(authReducer, initialState);
 
-  //Load User
+  // Load User
   const loadUser = async () => {
     if (localStorage.token) {
       setAuthToken(localStorage.token);
@@ -94,13 +93,12 @@ const AuthState = props => {
     }
   };
 
-  //Logout
+  // Logout
   const logout = () => dispatch({ type: LOGOUT });
 
-  //Clear Errors
-  const clearErrors = () => console.log('Clear');
+  // Clear Errors
+  const clearErrors = () => dispatch({ type: CLEAR_ERRORS });
 
-  //PROVIDER OUTPUT
   return (
     <AuthContext.Provider
       value={{
@@ -110,10 +108,10 @@ const AuthState = props => {
         user: state.user,
         error: state.error,
         register,
+        loadUser,
         login,
         logout,
-        clearErrors,
-        loadUser
+        clearErrors
       }}
     >
       {props.children}
